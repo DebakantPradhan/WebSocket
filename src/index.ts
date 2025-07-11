@@ -1,6 +1,7 @@
 import { WebSocketServer, WebSocket } from 'ws';
+const PORT = process.env.PORT || 8080;
 
-const wss = new WebSocketServer({ port: 8080 });
+const wss = new WebSocketServer({ port: PORT as number|| 8080 });
 
 function createRoom() {
 	const roomId = Math.random().toString(36).substring(2, 8).toUpperCase();
